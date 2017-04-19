@@ -82,5 +82,5 @@ class ActivityInfo(ProcessInterface):
         return '{0}/{1}-{2}.png'.format(self.imgDir, int(time() * 1000), random.randint(0, 10000))
 
 if __name__ == '__main__':
-    ai = ActivityInfo('/usr/share/fonts/truetype/wqy/wqy-microhei.ttc')
+    ai = ActivityInfo('/Users/junsong/personal/fonts/wqy-microhei/wqy-microhei.ttc')
     ai.generateActivityInfoForGroup('TestGroup')

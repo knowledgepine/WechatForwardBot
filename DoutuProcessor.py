@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from time import time
 from datetime import datetime
 from ProcessInterface import ProcessInterface
@@ -36,7 +37,7 @@ class DoutuProcessor(ProcessInterface):
         if type == TEXT and msg['Content'] == '/doutu':
             # Control mode
             self.activationTime[groupName] = time() + self.doutuTimeInterval
-            itchat.send('鸭哥进入斗图模式！ {0}分钟内群里所有照片和表情（除了商城表情），鸭哥都会回复斗图！'.format(int(self.doutuTimeInterval / 60)), destinationChatroomId)
+            itchat.send('进入斗图模式！ {0}分钟内群里所有照片和表情（除了商城表情），都会回复斗图！'.format(int(self.doutuTimeInterval / 60)), destinationChatroomId)
             Thread(target=DoutuEnd, args=[destinationChatroomId]).start()
             return
         if type != PICTURE:
@@ -56,7 +57,7 @@ class DoutuProcessor(ProcessInterface):
         if os.path.exists(newfnjpg):
             logging.info('[Doutu] imagemagick succeeded.')
         else:
-            itchat.send('鸭哥没办法和腾讯表情商城的表情斗图。。', destinationChatroomId)
+            itchat.send('无法和腾讯表情商城的表情斗图。。', destinationChatroomId)
             logging.info('[Doutu] imagemagick failed.')
             return
 

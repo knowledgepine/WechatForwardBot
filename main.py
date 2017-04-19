@@ -25,15 +25,14 @@ plugins = [
 /activity: 查看本群活动和话唠排名
 /tagcloud: 查看本群所有发言标签云
 /mytag: 查看自己的消息标签云
-/doutu: 启动斗图模式，机器人会对每一个非商城表情斗图。持续5分钟。
-此外，鸭哥是只有节操的鸭，每天只嘎100次。可以用鸭哥嘎一个来无视100次限制强行召唤鸭哥，但有5分钟技能冷却"""}),
+/doutu: 启动斗图模式，机器人会对每一个非商城表情斗图。持续5分钟。"""}),
     GaTextHook(),
     PaiDuiHook(),
     HistoryRecorder(),
-    GroupTagCloud('/usr/share/fonts/truetype/wqy/wqy-microhei.ttc'),
-    ActivityInfo('/usr/share/fonts/truetype/wqy/wqy-microhei.ttc'),
-    GroupMessageForwarder([ '二群', '三群' ], [ '科大AI二群测试中', '科大AI三群供测试' ]),
-    #DoutuProcessor('./DoutuFeatures.txt')  # Uncomment to enable Dou Tu
+    GroupTagCloud('/Users/junsong/personal/fonts/wqy-microhei/wqy-microhei.ttc'),
+    ActivityInfo('/Users/junsong/personal/fonts/wqy-microhei/wqy-microhei.ttc'),
+    GroupMessageForwarder([ 'TestWoodBot', 'TestWoodBot2' ], [ 'TestWoodBot', 'TestWoodBot2' ]),
+    DoutuProcessor('./DoutuFeatures.txt')  # Uncomment to enable Dou Tu
 ]
 for plugin in plugins:
     if not isinstance(plugin, ProcessInterface):

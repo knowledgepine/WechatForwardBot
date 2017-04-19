@@ -8,8 +8,8 @@ lines=`wc -l files.txt`
 echo files.txt generated, with $lines lines.
 
 # Invoke Caffe to extract features
-python3 -u ./extractFeatures.py -i files.txt -o newFeatures.txt
-sed -i 's/dat\/jpgs\///' newFeatures.txt
-sed -i 's/\.jpg\t/\t/' newFeatures.txt
+python -u ./extractFeatures.py -i files.txt -o newFeatures.txt
+sed -i.bak 's/dat\/jpgs\///' newFeatures.txt
+sed -i.bak 's/\.jpg\t/\t/' newFeatures.txt
 cp featuresall.txt featuresall.txt.bak
 cat newFeatures.txt >> featuresall.txt

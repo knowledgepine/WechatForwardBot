@@ -32,12 +32,12 @@ class GaTextHook(ProcessInterface):
         self.gaColl = self.client[dbName][gaCollName]
         GaTextHook.gaNumDict = { x['GroupName']: x['CurrentGaNum'] for x in self.gaColl.find() }
         self.gaNumMax = 100
-        self.triggerText = '鸭哥'
-        self.gaText = '嘎？'
-        self.forceTriggerText = '鸭哥嘎一个'
+        self.triggerText = '木头'
+        self.gaText = '干什么？'
+        self.forceTriggerText = '木头在哪里？'
         self.forceTriggerNextTimestamp = {}
         self.forceTriggerInterval = 5 * 60 # 5 minutes
-        self.forceTriggerGaText = '强力嘎！'
+        self.forceTriggerGaText = '在此！'
         scheduleTimerToClearGaNumDict()
 
         # Set up the clear timer

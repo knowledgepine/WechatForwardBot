@@ -95,6 +95,6 @@ class GroupTagCloud(ProcessInterface):
         return '{0}/{1}-{2}.png'.format(self.imgDir, int(time.time() * 1000), random.randint(0, 10000))
 
 if __name__ == '__main__':
-    groupTagCloud = GroupTagCloud('/usr/share/fonts/truetype/wqy/wqy-microhei.ttc')
-    groupTagCloud.generateTagCloudForGroup(''TestGroup', '鸭哥')
-    groupTagCloud.generateTagCloudForGroupV2('TestGroup', '鸭哥')
+    groupTagCloud = GroupTagCloud('/Users/junsong/personal/fonts/wqy-microhei/wqy-microhei.ttc')
+    groupTagCloud.generateTagCloudForGroup('TestWoodBot', 'test')
+    groupTagCloud.generateTagCloudForGroupV2('TestWoodBot', 'test')
